@@ -48,6 +48,8 @@ kubectl apply -f storageclass.yaml
 kubectl apply -f pvc.yaml
 ```
 
+
+
 You are going to face issues while doing so. Make things work as you start creating these objects.. 
 
 You need to know the following, 

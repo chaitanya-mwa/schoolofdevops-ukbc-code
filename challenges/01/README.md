@@ -1,6 +1,9 @@
+# Challenge 01 - Problem of Pods
+
 `difficulty: easy`
 
 ### STEPS
+
   * Apply deployments and service
 
 ```
@@ -21,7 +24,7 @@ frontend          NodePort    10.107.221.245   128.199.167.209   8079:32694/TCP 
 curl <HOSTIP:<NODEPORT>>
 ```
 
-Problem : even though pods and deployments are running, service is created, application does not load. 
+`Problem : even though pods and deployments are running, service is created, application does not load.`
 
 Fix it ! 
 
