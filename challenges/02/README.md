@@ -48,9 +48,15 @@ kubectl apply -f storageclass.yaml
 kubectl apply -f pvc.yaml
 ```
 
-
-
 You are going to face issues while doing so. Make things work as you start creating these objects.. 
+
+
+Check if your Persistent Volume Claim is bound or not?
+```
+kubectl get pvc
+```
+
+If it is pending, the problem is not solved yet. 
 
 You need to know the following, 
   - Managing pods
