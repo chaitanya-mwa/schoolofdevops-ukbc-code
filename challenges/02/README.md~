@@ -1,0 +1,34 @@
+
+### STEPS
+
+Create namespace and switch to it, 
+
+```
+kubectl apply -f  challenge02
+kubectl config set-context $(kubectl config current-context) --namespace=challenge02
+``` 
+
+Create the following objects in that sequence, 
+
+  * Service Account 
+  * Cluster Role 
+  * Cluster Role Binding 
+  * Stateful Set 
+  * Storage Class 
+  * PersistentVolumeClaim 
+
+You are going to face issues while doing so. Make things work as you start creating these objects.. 
+
+You need to know the following, 
+  - Managing pods
+  - Statefulsets
+  - RBAC 
+     - Service Accounts 
+     - Cluster Roles and Roles 
+     - Cluster Role Bindings 
+  - Persistent Volumes 
+     - Storage Classes
+     - PV and PVC 
+
+
+
