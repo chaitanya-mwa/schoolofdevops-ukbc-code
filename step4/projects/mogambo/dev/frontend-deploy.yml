@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: mogambo
+spec:
+  replicas: 2
+  template:
+    metadata:
+      name: frontend
+      labels:
+        tier: "1"
+        app: frontend
+        env: dev
+        version: v1.0
+    spec:
+      containers:
+        - name: frontend
+          image: schoolofdevops/frontend:v1.0
+          ports:
+            - containerPort: 8079
+              protocol: TCP

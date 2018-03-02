@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: mogambo
+spec:
+  selector:
+    app: frontend
+    env: dev
+    release: bluegreen
+    code: blue
+  ports:
+    - port: 8079
+      protocol: TCP
+      targetPort: 8079
+  type: NodePort
