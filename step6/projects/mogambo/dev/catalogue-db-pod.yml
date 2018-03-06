@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  name: catalogue-db
   labels:
     app: catalogue-db
     env: dev
@@ -22,3 +23,11 @@ spec:
           value: catalogue_user
         - name: MYSQL_PASSWORD
           value: default_password
+      volumeMounts:
+        - name: catalogue-db-vol
+          mountPath: /var/lib/mysql
+
+  volumes:
+    - name: catalogue-db-vol
+      persistentVolumeClaim:
+        claimName: catalogue-db-pvc
