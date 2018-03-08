@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ghost
+  namespace: ghost
+  labels:
+    app: ghost
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ghost
+    spec:
+      containers:
+      - name: ghost
+        image: ghost
+        imagePullPolicy: Always
+        env:
+        - name: database__client
+          value: "mysql"
+        - name: database__connection__host
+          value: "db"
+        - name: database__connection__user
+          value: "root"
+        - name: database__connection__password
+          value: "example123"
+        - name: database__connection__database
+          value: "ghost"
+        ports:
+        - name: http
+          containerPort: 2368

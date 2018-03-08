@@ -18,8 +18,5 @@ spec:
             - containerPort: 3306
               protocol: TCP
           env:
-        - name: MYSQL_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: ghost
-              key: MYSQL_ROOT_PASSWORD
+            - name: MYSQL_ROOT_PASSWORD
+              value: "example"
