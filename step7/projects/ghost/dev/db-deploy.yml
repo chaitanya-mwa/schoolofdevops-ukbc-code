@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: db
+  namespace: ghost
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: db
+      labels:
+        app: db
+    spec:
+      containers:
+        - name: db
+          image: mysql:5.7
+          ports:
+            - containerPort: 3306
+              protocol: TCP
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db
+                  key: MYSQL_ROOT_PASSWORD
