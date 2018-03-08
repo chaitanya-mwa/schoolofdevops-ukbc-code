@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: ghost
-  port: 
+  ports: 
     - port: 80
       protocol: TCP
       targetPort: 2368 
