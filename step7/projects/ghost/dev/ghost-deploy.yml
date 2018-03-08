@@ -24,7 +24,7 @@ spec:
         - name: database__connection__user
           value: "root"
         - name: database__connection__password
-          value: "example"
+          value: "example123"
         - name: database__connection__database
           value: "ghost"
         ports:
