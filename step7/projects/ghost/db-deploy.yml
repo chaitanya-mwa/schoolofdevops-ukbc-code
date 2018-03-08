@@ -10,7 +10,6 @@ spec:
       name: db
       label:
         app: db
-  spec:
     containers:
       - name: db
         image: mysql:5.7
