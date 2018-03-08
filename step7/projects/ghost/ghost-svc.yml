@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ghost
+  namespace: ghost
+spec:
+  selector:
+    app: ghost
+  port: 
+    - port: 80
+      protocol: TCP
+      targetPort: 2368 
+  type: NodePort
