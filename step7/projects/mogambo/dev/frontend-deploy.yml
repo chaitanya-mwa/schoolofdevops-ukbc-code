@@ -28,4 +28,14 @@ spec:
           ports:
             - containerPort: 8079
               protocol: TCP
-      
+          env:
+            - name: NODE_ENV
+              valueFrom: 
+                configMapKeyRef:
+                  name: frontend
+                  key: NODE_ENV
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend
+                  key: PORT
