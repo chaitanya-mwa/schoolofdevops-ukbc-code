@@ -4,7 +4,7 @@ metadata:
   name: frontend
   namespace: mogambo
 spec:
-  replicas: 0
+  replicas: 1
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -28,3 +28,4 @@ spec:
           ports:
             - containerPort: 8079
               protocol: TCP
+      

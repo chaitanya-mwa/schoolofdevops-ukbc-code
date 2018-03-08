@@ -22,6 +22,6 @@ spec:
       - name: load-test
         image: schoolofdevops/load-test
         command: ["/bin/sh"]
-        args: ["-c", "while true; do locust --host http://front-end.mogambo.svc.cluster.local -f /config/locustfile.py --clients 5 --hatch-rate 5 --num-request 1000 --no-web; done"]
+        args: ["-c", "while true; do locust --host http://frontend.mogambo.svc.cluster.local:8079 -f /config/locustfile.py --clients 5 --hatch-rate 5 --num-request 1000 --no-web; done"]
       nodeSelector:
         beta.kubernetes.io/os: linux
