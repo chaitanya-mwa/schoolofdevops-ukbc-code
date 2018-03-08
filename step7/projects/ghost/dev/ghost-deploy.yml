@@ -17,18 +17,8 @@ spec:
         image: ghost
         imagePullPolicy: Always
         envFrom:
-          - name: database__client
-            configMapRef:
-              name: ghost
-              key: database__client
-          - name: database__connection__host
-            configMapRef:
-              name: ghost
-              key: database__connection__host
-          - name: database__connection__database
-            configMapRef:
-              name: ghost
-              key: database__connection__database
+        - configMapRef:
+            name: ghost
         env:
           - name: database__connection__user 
             valueFrom:
