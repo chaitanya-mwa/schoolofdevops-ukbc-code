@@ -16,22 +16,20 @@ spec:
       - name: ghost
         image: ghost
         imagePullPolicy: Always
-        env:
+        envFrom:
           - name: database__client
-            valueFrom:
-              configMapRef:
-                name: ghost
-                key: database__client
+            configMapRef:
+              name: ghost
+              key: database__client
           - name: database__connection__host
-            valueFrom:
-              configMapRef:
-                name: ghost
-                key: database__connection__host
+            configMapRef:
+              name: ghost
+              key: database__connection__host
           - name: database__connection__database
-            valueFrom:
-              configMapRef:
-                name: ghost
-                key: database__connection__database
+            configMapRef:
+              name: ghost
+              key: database__connection__database
+        env:
           - name: database__connection__user 
             valueFrom:
               secretKeyRef:
