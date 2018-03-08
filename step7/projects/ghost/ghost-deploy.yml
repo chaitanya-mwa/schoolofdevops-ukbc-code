@@ -15,7 +15,7 @@ spec:
       containers:
       - name: ghost
         image: ghost
-        imagePullPolicy: always
+        imagePullPolicy: Always
         env:
         - name: database__client
           value: "mysql"
