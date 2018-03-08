@@ -17,31 +17,31 @@ spec:
         image: ghost
         imagePullPolicy: Always
         env:
-        - name: database__client
-          valueFrom:
-            configMapRef:
-              name: ghost
-              key: database__client
-        - name: database__connection__host
-          valueFrom:
-            configMapRef:
-              name: ghost
-              key: database__connection__host
-        - name: database__connection__database
-          valueFrom:
-            configMapRef:
-              name: ghost
-              key: database__connection__database
-        - name: database__connection__user 
-          valueFrom:
-            secretKeyRef:
-              name: ghost
-              key: database__connection__user
-        - name: database__connection__password
-          valueFrom:
-            secretKeyRef:
-              name: ghost
-              key: database__connection__password
+          - name: database__client
+            valueFrom:
+              configMapRef:
+                name: ghost
+                key: database__client
+          - name: database__connection__host
+            valueFrom:
+              configMapRef:
+                name: ghost
+                key: database__connection__host
+          - name: database__connection__database
+            valueFrom:
+              configMapRef:
+                name: ghost
+                key: database__connection__database
+          - name: database__connection__user 
+            valueFrom:
+              secretKeyRef:
+                name: ghost
+                key: database__connection__user
+          - name: database__connection__password
+            valueFrom:
+              secretKeyRef:
+                name: ghost
+                key: database__connection__password
         ports:
         - name: http
           containerPort: 2368
