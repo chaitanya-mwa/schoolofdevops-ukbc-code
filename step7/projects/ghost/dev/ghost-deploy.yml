@@ -16,20 +16,17 @@ spec:
       - name: ghost
         image: ghost
         imagePullPolicy: Always
-        envFrom:
-        - configMapRef:
-            name: ghost
         env:
-          - name: database__connection__user 
-            valueFrom:
-              secretKeyRef:
-                name: ghost
-                key: database__connection__user
-          - name: database__connection__password
-            valueFrom:
-              secretKeyRef:
-                name: ghost
-                key: database__connection__password
+        - name: database__client
+          value: "mysql"
+        - name: database__connection__host
+          value: "db"
+        - name: database__connection__user
+          value: "root"
+        - name: database__connection__password
+          value: "example123"
+        - name: database__connection__database
+          value: "ghost"
         ports:
         - name: http
           containerPort: 2368
