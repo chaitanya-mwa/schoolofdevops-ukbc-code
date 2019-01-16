@@ -1,4 +1,3 @@
-# Challenge 01 - Problem of Pods
 
 `difficulty: easy`
 
