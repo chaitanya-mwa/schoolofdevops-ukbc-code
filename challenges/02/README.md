@@ -85,6 +85,7 @@ You need to know the following,
      - Service Accounts 
      - Cluster Roles and Roles 
      - Cluster Role Bindings 
+  - Namespaces
   - Persistent Volumes 
      - Storage Classes
      - PV and PVC 
