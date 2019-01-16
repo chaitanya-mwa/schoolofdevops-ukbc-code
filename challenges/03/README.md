@@ -1,5 +1,5 @@
 
-`Difficulty Level : Hard`
+`Difficulty Level : Medium`
 
 ### STEPS
 
