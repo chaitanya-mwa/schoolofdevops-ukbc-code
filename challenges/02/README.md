@@ -1,4 +1,3 @@
-# Challenge 02 - Persistent Volume
 
 `Difficulty Level : Hard`
 
