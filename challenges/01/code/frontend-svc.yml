@@ -10,5 +10,4 @@ spec:
       protocol: TCP
       targetPort: 8079
   type: NodePort
-  externalIPs:
-    - 128.199.167.209
+  
