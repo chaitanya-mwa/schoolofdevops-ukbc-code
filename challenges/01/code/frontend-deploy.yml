@@ -1,9 +1,12 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
 spec:
   replicas: 2
+  selector: 
+    matchLabels: 
+      app: node
   template:
     metadata:
       name: frontend
